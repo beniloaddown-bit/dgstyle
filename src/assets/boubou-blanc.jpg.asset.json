@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "asset_id": "9831be8a-07c7-419a-ad9f-45f97c9e85de",
+  "project_id": "2a14c816-9dc2-443f-badc-05a21fceb271",
+  "url": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Handsome%20elegant%20Black%20African%20man%20standing%20wearing%20off%20white%20cream%20ceremonial%20boubou%20robe%20with%20wide%20brown%20taupe%20embroidered%20decorative%20panel%20on%20shoulder%20and%20chest%2C%20wearing%20bracelets%20rings%20on%20fingers%2C%20brown%20leather%20cross%20strap%20sandals%2C%20bright%20lime%20yellow%20green%20solid%20studio%20background%2C%20high%20fashion%20catalog%20photography%2C%20full%20body%20shot&image_size=portrait_4_3",
+  "r2_key": "a/v1/2a14c816-9dc2-443f-badc-05a21fceb271/9831be8a-07c7-419a-ad9f-45f97c9e85de/boubou-blanc.jpg",
+  "original_filename": "boubou-blanc.jpg",
+  "size": 51609,
+  "content_type": "image/jpeg",
+  "created_at": "2026-08-31T15:14:36Z"
+}

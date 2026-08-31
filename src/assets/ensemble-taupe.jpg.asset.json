@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "asset_id": "6d21d280-253d-4fcf-a0f1-5acf45018471",
+  "project_id": "2a14c816-9dc2-443f-badc-05a21fceb271",
+  "url": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Handsome%20elegant%20Black%20African%20man%20seated%20on%20tall%20metal%20stool%2C%20wearing%20taupe%20beige%20brown%20three%20piece%20grand%20boubou%20outfit%20flowing%20robe%20with%20geometric%20maze%20labyrinth%20white%20embroidery%20panel%20on%20chest%2C%20wearing%20sunglasses%2C%20brown%20leather%20sandals%20on%20feet%2C%20bright%20lime%20yellow%20green%20solid%20studio%20background%2C%20high%20fashion%20catalog%20photography%2C%20full%20body%20shot&image_size=portrait_4_3",
+  "r2_key": "a/v1/2a14c816-9dc2-443f-badc-05a21fceb271/6d21d280-253d-4fcf-a0f1-5acf45018471/ensemble-taupe.jpg",
+  "original_filename": "ensemble-taupe.jpg",
+  "size": 54283,
+  "content_type": "image/jpeg",
+  "created_at": "2026-08-31T15:14:34Z"
+}

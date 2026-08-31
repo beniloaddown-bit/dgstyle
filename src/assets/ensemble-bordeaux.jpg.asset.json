@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "asset_id": "9cb843f4-9855-4441-9aa0-c88eb1282a16",
+  "project_id": "2a14c816-9dc2-443f-badc-05a21fceb271",
+  "url": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Handsome%20elegant%20Black%20African%20man%20wearing%20deep%20purple%20bordeaux%20two%20piece%20outfit%20matching%20long%20sleeve%20tunic%20shirt%20and%20pants%20with%20white%20geometric%20braided%20embroidery%20vertically%20down%20front%20placket%2C%20wearing%20black%20sunglasses%20posing%20with%20one%20hand%20near%20glasses%2C%20bright%20lime%20yellow%20green%20solid%20studio%20background%2C%20high%20fashion%20catalog%20photography%2C%20full%20body%20shot&image_size=portrait_4_3",
+  "r2_key": "a/v1/2a14c816-9dc2-443f-badc-05a21fceb271/9cb843f4-9855-4441-9aa0-c88eb1282a16/ensemble-bordeaux.jpg",
+  "original_filename": "ensemble-bordeaux.jpg",
+  "size": 49145,
+  "content_type": "image/jpeg",
+  "created_at": "2026-08-31T15:14:28Z"
+}

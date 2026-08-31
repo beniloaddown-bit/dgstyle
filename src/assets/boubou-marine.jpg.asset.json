@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "asset_id": "b92cf2a9-e1ad-438e-b363-259eba8ef949",
+  "project_id": "2a14c816-9dc2-443f-badc-05a21fceb271",
+  "url": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Handsome%20elegant%20Black%20African%20man%20with%20short%20curly%20hair%20wearing%20dark%20navy%20marine%20blue%20grand%20boubou%20textured%20jacquard%20fabric%20with%20decorative%20front%20panel%20of%20colorful%20geometric%20shapes%20circles%20rectangles%20in%20orange%20yellow%20white%20beige%2C%20smiling%20wearing%20sunglasses%20holding%20black%20shopping%20bag%20with%20DG%20Style%20logo%2C%20olive%20green%20gradient%20studio%20background%2C%20high%20fashion%20catalog%20photography%2C%20full%20body%20shot&image_size=portrait_4_3",
+  "r2_key": "a/v1/2a14c816-9dc2-443f-badc-05a21fceb271/b92cf2a9-e1ad-438e-b363-259eba8ef949/boubou-marine.jpg",
+  "original_filename": "boubou-marine.jpg",
+  "size": 125865,
+  "content_type": "image/jpeg",
+  "created_at": "2026-08-31T15:14:25Z"
+}
