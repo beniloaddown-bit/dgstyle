@@ -1,10 +1,3 @@
-import boubouMarine from "@/assets/boubou-marine.jpg.asset.json";
-import ensembleBordeaux from "@/assets/ensemble-bordeaux.jpg.asset.json";
-import agbadaBeige from "@/assets/agbada-beige.jpg.asset.json";
-import ensembleTaupe from "@/assets/ensemble-taupe.jpg.asset.json";
-import boubouBlanc from "@/assets/boubou-blanc.jpg.asset.json";
-import tuniqueMarine from "@/assets/tunique-marine.jpg.asset.json";
-
 export type Product = {
   id: string;
   name: string;
@@ -21,7 +14,7 @@ export const products: Product[] = [
     id: "grand-boubou-marine",
     name: "Grand Boubou Marine",
     price: 125000,
-    image: boubouMarine.url,
+    image: "/grand-boubou-marine.jpeg",
     tagline: "Bazin riche, applique géométrique",
     description:
       "Grand boubou en bazin riche marine, orné d'une applique géométrique contemporaine cousue main. Le tombé lourd assure une prestance immédiate.",
@@ -32,7 +25,7 @@ export const products: Product[] = [
     id: "ensemble-bordeaux",
     name: "Ensemble Bordeaux",
     price: 85000,
-    image: ensembleBordeaux.url,
+    image: "/ensemble-bordeaux.jpeg",
     tagline: "Deux pièces, broderie col tressé",
     description:
       "Ensemble deux pièces bordeaux à coupe droite, col officier rehaussé d'une broderie tressée blanche. Une pièce de ville élégante et sobre.",
@@ -42,7 +35,7 @@ export const products: Product[] = [
     id: "agbada-royal-beige",
     name: "Agbada Royal Beige",
     price: 150000,
-    image: agbadaBeige.url,
+    image: "/agbada-royal-beige.jpeg",
     tagline: "Coton de soie, broderie éventail",
     description:
       "Pièce maîtresse travaillée dans un coton de soie premium avec broderies artisanales ton sur ton en éventail. Trois pièces : boubou, tunique et pantalon.",
@@ -53,7 +46,7 @@ export const products: Product[] = [
     id: "ensemble-taupe",
     name: "Grand Boubou Taupe",
     price: 135000,
-    image: ensembleTaupe.url,
+    image: "/ensemble-taupe.jpeg",
     tagline: "Lin mélangé, plastron labyrinthe",
     description:
       "Grand boubou taupe en lin mélangé, plastron brodé de motifs labyrinthe ivoire. Confort et tenue pour les grandes cérémonies.",
@@ -63,7 +56,7 @@ export const products: Product[] = [
     id: "boubou-blanc",
     name: "Boubou Blanc Cérémonie",
     price: 160000,
-    image: boubouBlanc.url,
+    image: "/boubou-blanc.jpeg",
     tagline: "Blanc pur, broderie entrelacs",
     description:
       "Boubou blanc de cérémonie aux finitions taupe et broderie entrelacs sur le plastron. La pièce des grands jours.",
@@ -73,7 +66,7 @@ export const products: Product[] = [
     id: "tunique-marine",
     name: "Tunique Marine Bazin",
     price: 75000,
-    image: tuniqueMarine.url,
+    image: "/tunique-marine.jpeg",
     tagline: "Bazin jacquard, galon coloré",
     description:
       "Tunique en bazin jacquard marine avec galon brodé multicolore sur la patte de boutonnage. Portée avec son pantalon assorti.",
