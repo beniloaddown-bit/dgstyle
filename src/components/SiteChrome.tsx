@@ -237,7 +237,7 @@ export function SiteFooter() {
             <div className="flex flex-col gap-3 text-xs">
               <div className="inline-flex items-center gap-3 rounded-xl bg-white px-4 py-3 ring-1 ring-white/10">
                 <img
-                  src="/t_l_chargement_1__original.png"
+                  src="/images/orange-money.png"
                   alt="Logo Orange Money"
                   className="h-8 shrink-0 w-auto object-contain"
                   loading="lazy"
@@ -246,7 +246,7 @@ export function SiteFooter() {
               </div>
               <div className="inline-flex items-center gap-3 rounded-xl bg-[#00C2FF] px-4 py-3 ring-1 ring-cream/10">
                 <img
-                  src="/wave_sngal_logo.jpeg"
+                  src="/images/wave-senegal.jpeg"
                   alt="Logo Wave Sénégal"
                   className="h-10 shrink-0 w-auto rounded-lg object-contain"
                   loading="lazy"

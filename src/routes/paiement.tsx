@@ -227,7 +227,7 @@ function Paiement() {
                     }`}
                   >
                     <img
-                      src="/t_l_chargement_1__original.png"
+                      src="/images/orange-money.png"
                       alt="Logo Orange Money"
                       className="h-8 w-auto object-contain sm:h-12"
                     />
@@ -246,7 +246,7 @@ function Paiement() {
                     }`}
                   >
                     <img
-                      src="/wave_sngal_logo.jpeg"
+                      src="/images/wave-senegal.jpeg"
                       alt="Logo Wave Sénégal"
                       className="h-10 w-auto rounded-lg object-contain sm:h-14"
                     />

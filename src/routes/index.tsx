@@ -237,7 +237,7 @@ function Home() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 ring-1 ring-border sm:p-6">
               <img
-                src="/t_l_chargement_1__original.png"
+                src="/images/orange-money.png"
                 alt="Logo Orange Money"
                 className="h-8 w-auto object-contain sm:h-12"
                 loading="lazy"
@@ -246,7 +246,7 @@ function Home() {
             </div>
             <div className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#00C2FF] p-4 ring-1 ring-[#00C2FF]/20 sm:p-6">
               <img
-                src="/wave_sngal_logo.jpeg"
+                src="/images/wave-senegal.jpeg"
                 alt="Logo Wave Sénégal"
                 className="h-10 w-auto rounded-lg object-contain sm:h-14"
                 loading="lazy"
