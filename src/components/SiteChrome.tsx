@@ -8,6 +8,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetClose,
+  SheetTrigger,
 } from "@/components/ui/sheet";
 
 const NAV_LINKS = [
@@ -26,7 +27,7 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <div className="flex items-center gap-2 sm:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetClose asChild>
+            <SheetTrigger asChild>
               <button
                 type="button"
                 aria-label="Ouvrir le menu"
@@ -34,7 +35,7 @@ export function SiteNav() {
               >
                 <Menu className="h-5 w-5" aria-hidden />
               </button>
-            </SheetClose>
+            </SheetTrigger>
             <SheetContent side="left" className="w-[82%] sm:max-w-sm">
               <SheetHeader className="mb-6 text-left">
                 <SheetTitle className="font-display text-2xl text-olive">
