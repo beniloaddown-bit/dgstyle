@@ -52,11 +52,9 @@ function Contact() {
               Message envoyé
             </h1>
             <p className="mx-auto mb-8 max-w-md text-sm leading-relaxed text-pretty text-muted-foreground sm:text-base">
-              Merci {form.prenom ? `${form.prenom} ` : ""}! Notre équipe vous répondra sous 24h
-              sur le numéro{" "}
-              <span className="font-semibold text-foreground">
-                {form.telephone || "indiqué"}
-              </span>{" "}
+              Merci {form.prenom ? `${form.prenom} ` : ""}! Notre équipe vous répondra sous 24h sur
+              le numéro{" "}
+              <span className="font-semibold text-foreground">{form.telephone || "indiqué"}</span>{" "}
               ou par email.
             </p>
             <div className="mx-auto flex max-w-sm flex-col gap-3 sm:flex-row sm:justify-center">
@@ -102,8 +100,8 @@ function Contact() {
           Parlons de votre projet
         </h1>
         <p className="mb-10 max-w-[56ch] text-sm text-pretty text-muted-foreground sm:text-base md:mb-14">
-          Notre équipe est à votre écoute pour toute question sur nos créations,
-          les tailles, les délais de confection ou une demande spécifique.
+          Notre équipe est à votre écoute pour toute question sur nos créations, les tailles, les
+          délais de confection ou une demande spécifique.
         </p>
 
         <div className="grid gap-8 md:grid-cols-5 md:gap-10">
@@ -308,8 +306,8 @@ function Contact() {
             </button>
 
             <p className="text-center text-[10px] leading-relaxed text-muted-foreground sm:text-[11px]">
-              Champs marqués d'un (*) obligatoires. Vos données restent
-              confidentielles et ne sont jamais partagées.
+              Champs marqués d'un (*) obligatoires. Vos données restent confidentielles et ne sont
+              jamais partagées.
             </p>
           </form>
         </div>

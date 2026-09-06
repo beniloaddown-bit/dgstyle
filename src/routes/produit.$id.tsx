@@ -45,11 +45,7 @@ function ProductPage() {
         <div className="grid gap-8 md:grid-cols-2 md:gap-12">
           {/* IMAGE */}
           <div className="order-1 aspect-[4/5] w-full overflow-hidden rounded-[min(3vw,24px)] ring-1 ring-black/5 shadow-sm md:aspect-[4/5] md:sticky md:top-24">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="size-full object-cover"
-            />
+            <img src={product.image} alt={product.name} className="size-full object-cover" />
           </div>
 
           {/* INFO */}
@@ -163,12 +159,8 @@ function ProductPage() {
         <section className="mx-auto max-w-6xl border-t border-border/60 px-4 py-12 sm:px-6 sm:py-16">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-3">
             <div>
-              <h2 className="font-display text-2xl font-medium sm:text-3xl">
-                Vous aimerez aussi
-              </h2>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Autres pièces de la collection.
-              </p>
+              <h2 className="font-display text-2xl font-medium sm:text-3xl">Vous aimerez aussi</h2>
+              <p className="mt-1 text-sm text-muted-foreground">Autres pièces de la collection.</p>
             </div>
             <Link
               to="/collection"
@@ -180,12 +172,7 @@ function ProductPage() {
 
           <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-10">
             {related.map((p) => (
-              <Link
-                key={p.id}
-                to="/produit/$id"
-                params={{ id: p.id }}
-                className="group block"
-              >
+              <Link key={p.id} to="/produit/$id" params={{ id: p.id }} className="group block">
                 <div className="mb-3 aspect-[4/5] overflow-hidden rounded-[min(2vw,16px)] ring-1 ring-black/5 transition-all group-hover:-translate-y-0.5 group-hover:shadow-xl">
                   <img
                     src={p.image}

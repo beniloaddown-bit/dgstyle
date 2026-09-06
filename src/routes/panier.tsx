@@ -10,8 +10,7 @@ export const Route = createFileRoute("/panier")({
       { title: "Votre panier — DGStyle" },
       {
         name: "description",
-        content:
-          "Récapitulatif de votre commande DGStyle avant paiement par Orange Money ou Wave.",
+        content: "Récapitulatif de votre commande DGStyle avant paiement par Orange Money ou Wave.",
       },
       { property: "og:title", content: "Votre panier — DGStyle" },
       { property: "og:description", content: "Récapitulatif de votre commande DGStyle." },
@@ -104,7 +103,8 @@ function Panier() {
                           Taille <span className="font-semibold text-foreground">{line.size}</span>
                           {line.qty > 1 && (
                             <>
-                              {" "}· Quantité{" "}
+                              {" "}
+                              · Quantité{" "}
                               <span className="font-semibold text-foreground">{line.qty}</span>
                             </>
                           )}

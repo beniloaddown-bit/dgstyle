@@ -38,9 +38,7 @@ export function SiteNav() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[82%] sm:max-w-sm">
               <SheetHeader className="mb-6 text-left">
-                <SheetTitle className="font-display text-2xl text-olive">
-                  DGStyle
-                </SheetTitle>
+                <SheetTitle className="font-display text-2xl text-olive">DGStyle</SheetTitle>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">
                   L'élégance dépasse le temps
                 </p>
@@ -84,9 +82,7 @@ export function SiteNav() {
                 >
                   +221 77 499 17 79
                 </a>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  Lun – Sam · 9h – 19h
-                </p>
+                <p className="mt-1 text-xs text-muted-foreground">Lun – Sam · 9h – 19h</p>
               </div>
             </SheetContent>
           </Sheet>
@@ -99,10 +95,7 @@ export function SiteNav() {
           Collection
         </Link>
 
-        <Link
-          to="/"
-          className="font-display text-lg font-medium tracking-tight sm:text-xl"
-        >
+        <Link to="/" className="font-display text-lg font-medium tracking-tight sm:text-xl">
           DGStyle
         </Link>
 
@@ -144,12 +137,10 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="mb-3 font-display text-2xl italic text-lime md:text-3xl">
-              DGStyle
-            </div>
+            <div className="mb-3 font-display text-2xl italic text-lime md:text-3xl">DGStyle</div>
             <p className="mb-5 max-w-[46ch] text-xs leading-relaxed text-pretty text-cream/70 sm:text-sm">
-              Confection de luxe à Dakar. L'héritage du boubou réinventé pour
-              l'homme d'aujourd'hui. Pièces cousues main dans notre atelier.
+              Confection de luxe à Dakar. L'héritage du boubou réinventé pour l'homme d'aujourd'hui.
+              Pièces cousues main dans notre atelier.
             </p>
             <ul className="space-y-2 text-sm text-cream/90">
               <li className="flex items-center gap-2">
@@ -165,11 +156,17 @@ export function SiteFooter() {
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-lime" aria-hidden />
+                <span
+                  className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-lime"
+                  aria-hidden
+                />
                 <span>Dakar, Sénégal · Atelier sur rendez-vous</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-lime" aria-hidden />
+                <span
+                  className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-lime"
+                  aria-hidden
+                />
                 <span>Lun – Sam · 9h – 19h (fermé le dimanche)</span>
               </li>
             </ul>
@@ -181,50 +178,32 @@ export function SiteFooter() {
             </h4>
             <ul className="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-medium uppercase tracking-wider sm:text-[11px]">
               <li>
-                <Link
-                  to="/"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/" className="transition-colors hover:text-lime">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/collection"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/collection" className="transition-colors hover:text-lime">
                   Collection
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/devis"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/devis" className="transition-colors hover:text-lime">
                   Demande de devis
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/contact" className="transition-colors hover:text-lime">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/panier"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/panier" className="transition-colors hover:text-lime">
                   Panier
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/paiement"
-                  className="transition-colors hover:text-lime"
-                >
+                <Link to="/paiement" className="transition-colors hover:text-lime">
                   Paiement
                 </Link>
               </li>

@@ -2,7 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteFooter, SiteNav } from "@/components/SiteChrome";
 import { products, formatPrice } from "@/lib/products";
-import { ArrowLeft, Check, Clock, FileText, Gauge, Palette, Ruler, Scissors, Truck } from "lucide-react";
+import {
+  ArrowLeft,
+  Check,
+  Clock,
+  FileText,
+  Gauge,
+  Palette,
+  Ruler,
+  Scissors,
+  Truck,
+} from "lucide-react";
 
 export const Route = createFileRoute("/devis")({
   head: () => ({
@@ -107,9 +117,11 @@ function Devis() {
               Devis enregistré
             </h1>
             <p className="mx-auto mb-8 max-w-md text-sm leading-relaxed text-pretty text-muted-foreground sm:text-base">
-              Merci {form.prenom ? `${form.prenom} ` : ""}! Notre équipe vous contacte sous
-              24h sur le{" "}
-              <span className="font-semibold text-foreground">{form.telephone || "numéro indiqué"}</span>{" "}
+              Merci {form.prenom ? `${form.prenom} ` : ""}! Notre équipe vous contacte sous 24h sur
+              le{" "}
+              <span className="font-semibold text-foreground">
+                {form.telephone || "numéro indiqué"}
+              </span>{" "}
               pour affiner votre projet.
             </p>
 
@@ -126,15 +138,11 @@ function Devis() {
                 </div>
                 <div className="flex items-baseline justify-between gap-3">
                   <dt className="text-muted-foreground">Tissu</dt>
-                  <dd className="text-right font-medium leading-snug">
-                    {form.tissu || "—"}
-                  </dd>
+                  <dd className="text-right font-medium leading-snug">{form.tissu || "—"}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-3">
                   <dt className="text-muted-foreground">Couleur</dt>
-                  <dd className="text-right font-medium leading-snug">
-                    {form.couleur || "—"}
-                  </dd>
+                  <dd className="text-right font-medium leading-snug">{form.couleur || "—"}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-3">
                   <dt className="text-muted-foreground">Taille · Qté</dt>
@@ -200,8 +208,8 @@ function Devis() {
           Pièce sur mesure
         </h1>
         <p className="mb-10 max-w-[56ch] text-sm text-pretty text-muted-foreground sm:text-base md:mb-14">
-          Décrivez-nous la pièce de vos rêves : choix du tissu, broderies, coupe,
-          mensurations. Notre atelier vous envoie un devis précis sous 24h.
+          Décrivez-nous la pièce de vos rêves : choix du tissu, broderies, coupe, mensurations.
+          Notre atelier vous envoie un devis précis sous 24h.
         </p>
 
         <div className="grid gap-8 md:grid-cols-12 md:gap-10">
@@ -231,9 +239,7 @@ function Devis() {
                 <p className="text-sm font-medium">
                   {formatPrice(75000)} – {formatPrice(200000)}
                 </p>
-                <p className="mt-1 text-[11px] text-muted-foreground">
-                  Selon tissu et complexité
-                </p>
+                <p className="mt-1 text-[11px] text-muted-foreground">Selon tissu et complexité</p>
               </div>
             </div>
 
@@ -576,8 +582,8 @@ function Devis() {
 
             <p className="text-center text-[10px] leading-relaxed text-muted-foreground sm:text-[11px]">
               Ce devis est{" "}
-              <span className="font-medium text-foreground">gratuit et sans engagement</span>.
-              Vous recevez une réponse personnalisée sous 24h ouvrées.
+              <span className="font-medium text-foreground">gratuit et sans engagement</span>. Vous
+              recevez une réponse personnalisée sous 24h ouvrées.
             </p>
           </form>
         </div>

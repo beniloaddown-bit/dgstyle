@@ -30,9 +30,8 @@ export const Route = createFileRoute("/collection")({
 });
 
 function Collection() {
-  const productSlides = Array.from(
-    { length: Math.ceil(products.length / 4) },
-    (_, index) => products.slice(index * 4, index * 4 + 4),
+  const productSlides = Array.from({ length: Math.ceil(products.length / 4) }, (_, index) =>
+    products.slice(index * 4, index * 4 + 4),
   );
 
   return (
@@ -51,8 +50,8 @@ function Collection() {
               Toute la collection
             </h1>
             <p className="mt-2 max-w-[56ch] text-sm text-pretty text-muted-foreground sm:text-base">
-              {products.length} pièces signature confectionnées à la main dans
-              notre atelier de Dakar. Livraison partout au Sénégal.
+              {products.length} pièces signature confectionnées à la main dans notre atelier de
+              Dakar. Livraison partout au Sénégal.
             </p>
           </div>
           <Link
@@ -65,10 +64,16 @@ function Collection() {
         </header>
 
         <Carousel
-          opts={{ loop: true, align: "start", slidesToScroll: 1 }}
-          className="relative"
+          opts={{
+            loop: true,
+            align: "start",
+            slidesToScroll: 1,
+            dragFree: true,
+            containScroll: "trimSnaps",
+          }}
+          className="relative select-none"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 cursor-grab touch-pan-y active:cursor-grabbing md:-ml-4">
             {productSlides.map((slideProducts, slideIndex) => (
               <CarouselItem key={slideIndex} className="basis-full pl-2 md:pl-4">
                 <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-4 sm:gap-y-10 md:grid-cols-2">
@@ -119,8 +124,8 @@ function Collection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-2 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm sm:-left-4" />
-          <CarouselNext className="-right-2 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm sm:-right-4" />
+          <CarouselPrevious className="hidden md:flex md:-left-4 md:top-1/2 md:-translate-y-1/2 md:bg-background/90 md:backdrop-blur-sm" />
+          <CarouselNext className="hidden md:flex md:-right-4 md:top-1/2 md:-translate-y-1/2 md:bg-background/90 md:backdrop-blur-sm" />
         </Carousel>
       </section>
 

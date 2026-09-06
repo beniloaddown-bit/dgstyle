@@ -86,9 +86,7 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="font-display text-2xl font-medium sm:text-3xl">
-              La Collection
-            </h2>
+            <h2 className="font-display text-2xl font-medium sm:text-3xl">La Collection</h2>
             <p className="mt-1 text-sm text-muted-foreground">
               Pièces signature, cousues à la main.
             </p>
@@ -225,14 +223,12 @@ function Home() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mb-8 flex items-center gap-2">
           <div className="size-1.5 rounded-full bg-olive" />
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em]">
-            Paiement sécurisé
-          </h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.2em]">Paiement sécurisé</h2>
         </div>
         <div className="space-y-6 rounded-[min(2vw,24px)] bg-card p-5 ring-1 ring-black/5 sm:p-8">
           <p className="max-w-2xl text-sm text-pretty text-muted-foreground sm:text-base">
-            Réglez vos commandes en toute simplicité avec Orange Money ou Wave,
-            directement depuis votre téléphone. Livraison à Dakar sous 48h.
+            Réglez vos commandes en toute simplicité avec Orange Money ou Wave, directement depuis
+            votre téléphone. Livraison à Dakar sous 48h.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 ring-1 ring-border sm:p-6">
@@ -242,7 +238,9 @@ function Home() {
                 className="h-8 w-auto object-contain sm:h-12"
                 loading="lazy"
               />
-              <span className="text-[11px] font-medium text-muted-foreground sm:text-xs">Paiement mobile</span>
+              <span className="text-[11px] font-medium text-muted-foreground sm:text-xs">
+                Paiement mobile
+              </span>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#00C2FF] p-4 ring-1 ring-[#00C2FF]/20 sm:p-6">
               <img
@@ -251,7 +249,9 @@ function Home() {
                 className="h-10 w-auto rounded-lg object-contain sm:h-14"
                 loading="lazy"
               />
-              <span className="text-[11px] font-medium text-white/95 sm:text-xs">Argent mobile</span>
+              <span className="text-[11px] font-medium text-white/95 sm:text-xs">
+                Argent mobile
+              </span>
             </div>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

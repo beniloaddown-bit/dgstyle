@@ -26,6 +26,10 @@ export const Route = createFileRoute("/paiement")({
 
 const DELIVERY = 2500;
 
+type ViteClientEnv = ImportMeta["env"] & {
+  VITE_INTERNAL_API_KEY?: string;
+};
+
 function Paiement() {
   const { detailed, subtotal, clear } = useCart();
   const [method, setMethod] = useState<"orange" | "wave">("orange");
@@ -53,8 +57,8 @@ function Paiement() {
                 {method === "orange" ? "Orange Money" : "Wave"}
               </span>{" "}
               sur le numéro{" "}
-              <span className="font-semibold text-foreground">{phone || "indiqué"}</span>.
-              Notre équipe vous contacte ensuite pour la livraison à Dakar sous 48h.
+              <span className="font-semibold text-foreground">{phone || "indiqué"}</span>. Notre
+              équipe vous contacte ensuite pour la livraison à Dakar sous 48h.
             </p>
             <div className="mx-auto flex max-w-sm flex-col gap-3">
               <Link
@@ -110,21 +114,12 @@ function Paiement() {
 
               <ul className="space-y-3 text-sm">
                 {detailed.length === 0 && (
-                  <li className="text-xs text-muted-foreground">
-                    Votre panier est vide.
-                  </li>
+                  <li className="text-xs text-muted-foreground">Votre panier est vide.</li>
                 )}
                 {detailed.map(({ line, product }) => (
-                  <li
-                    key={`${line.id}-${line.size}`}
-                    className="flex items-start gap-3"
-                  >
+                  <li key={`${line.id}-${line.size}`} className="flex items-start gap-3">
                     <div className="h-14 w-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-black/5">
-                      <img
-                        src={product.image}
-                        alt=""
-                        className="size-full object-cover"
-                      />
+                      <img src={product.image} alt="" className="size-full object-cover" />
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-[13px] font-medium leading-snug">
@@ -148,14 +143,10 @@ function Paiement() {
                 </div>
                 <div className="flex items-center justify-between">
                   <dt className="text-muted-foreground">Livraison Dakar</dt>
-                  <dd className="font-medium">
-                    {formatPrice(detailed.length ? DELIVERY : 0)}
-                  </dd>
+                  <dd className="font-medium">{formatPrice(detailed.length ? DELIVERY : 0)}</dd>
                 </div>
                 <div className="flex items-baseline justify-between border-t border-border pt-3">
-                  <dt className="text-sm font-semibold uppercase tracking-wider">
-                    Total
-                  </dt>
+                  <dt className="text-sm font-semibold uppercase tracking-wider">Total</dt>
                   <dd className="font-display text-2xl font-semibold tracking-tight text-olive sm:text-3xl">
                     {formatPrice(total)}
                   </dd>
@@ -166,48 +157,49 @@ function Paiement() {
 
           {/* Form */}
           <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                setError(null);
-                if (detailed.length === 0 || phone.trim().length < 9) return;
-                setLoading(true);
-                try {
-                  const res = await fetch("/api/pay", {
-                    method: "POST",
-                    headers: {
-                      "content-type": "application/json",
-                      "x-internal-key": (import.meta as any).env.VITE_INTERNAL_API_KEY || "",
-                    },
-                    body: JSON.stringify({
-                      method,
-                      phone,
-                      amount: total,
-                      items: detailed.map(({ line, product }) => ({ line, product })),
-                    }),
-                  });
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setError(null);
+              if (detailed.length === 0 || phone.trim().length < 9) return;
+              setLoading(true);
+              try {
+                const viteEnv = import.meta.env as ViteClientEnv;
+                const res = await fetch("/api/pay", {
+                  method: "POST",
+                  headers: {
+                    "content-type": "application/json",
+                    "x-internal-key": viteEnv.VITE_INTERNAL_API_KEY || "",
+                  },
+                  body: JSON.stringify({
+                    method,
+                    phone,
+                    amount: total,
+                    items: detailed.map(({ line, product }) => ({ line, product })),
+                  }),
+                });
 
-                  const payload = await res.json().catch(() => ({}));
+                const payload = await res.json().catch(() => ({}));
 
-                  if (!res.ok) {
-                    setError(payload?.error || "Erreur lors de la demande de paiement");
-                    setLoading(false);
-                    return;
-                  }
-
-                  if (payload?.redirectUrl) {
-                    window.location.href = payload.redirectUrl;
-                    return;
-                  }
-
-                  clear();
-                  setDone(true);
-                } catch (err) {
-                  console.error(err);
-                  setError("Impossible de contacter le serveur");
-                } finally {
+                if (!res.ok) {
+                  setError(payload?.error || "Erreur lors de la demande de paiement");
                   setLoading(false);
+                  return;
                 }
-              }}
+
+                if (payload?.redirectUrl) {
+                  window.location.href = payload.redirectUrl;
+                  return;
+                }
+
+                clear();
+                setDone(true);
+              } catch (err) {
+                console.error(err);
+                setError("Impossible de contacter le serveur");
+              } finally {
+                setLoading(false);
+              }
+            }}
             className="order-1 space-y-6 lg:col-span-3 lg:order-2"
           >
             <div className="space-y-4 rounded-[min(3vw,20px)] bg-card p-5 ring-1 ring-black/5 sm:p-6">
@@ -262,8 +254,7 @@ function Paiement() {
                   htmlFor="phone"
                   className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground"
                 >
-                  2 — Numéro{" "}
-                  {method === "orange" ? "Orange Money" : "Wave"} · obligatoire
+                  2 — Numéro {method === "orange" ? "Orange Money" : "Wave"} · obligatoire
                 </label>
                 <input
                   id="phone"
@@ -311,7 +302,8 @@ function Paiement() {
 
             <p className="text-center text-[10px] text-muted-foreground sm:text-xs">
               <ShieldCheck className="mx-auto mb-1 inline h-3 w-3 align-middle" />
-              &nbsp;Paiement sécurisé par {method === "orange" ? "Orange Money" : "Wave"} · Pas de stockage de données bancaires.
+              &nbsp;Paiement sécurisé par {method === "orange" ? "Orange Money" : "Wave"} · Pas de
+              stockage de données bancaires.
             </p>
           </form>
         </div>
