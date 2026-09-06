@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteFooter, SiteNav } from "@/components/SiteChrome";
+import WhatsAppButton from "@/components/ui/whatsapp";
 import { formatPrice, getProduct, products } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { ArrowRight, Check, ShieldCheck, Truck } from "lucide-react";
@@ -27,6 +28,11 @@ function ProductPage() {
   const { add } = useCart();
   const [size, setSize] = useState(product.sizes[0]!);
   const [added, setAdded] = useState(false);
+
+  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+  const waMessage = `Bonjour, je souhaite discuter du produit ${product.name} (Taille: ${size}) — ${formatPrice(
+    product.price,
+  )}. Voici le lien: ${pageUrl}`;
 
   const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
@@ -149,6 +155,10 @@ function ProductPage() {
               >
                 Préférer une pièce sur mesure ?
               </Link>
+
+              <div className="mt-2">
+                <WhatsAppButton message={waMessage} className="bg-olive text-cream hover:bg-olive/90" />
+              </div>
             </div>
           </div>
         </div>
