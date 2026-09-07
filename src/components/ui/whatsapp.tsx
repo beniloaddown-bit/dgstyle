@@ -1,24 +1,30 @@
 import React from "react";
 
 type WhatsAppButtonProps = {
+  phoneNumber?: string;
   message?: string;
   label?: string;
   className?: string;
 };
 
+const DEFAULT_PHONE_NUMBER = "221774991779";
+
 export default function WhatsAppButton({
+  phoneNumber = DEFAULT_PHONE_NUMBER,
   message = "Bonjour, j'aimerais discuter de ce produit.",
   label = "Discuter sur WhatsApp",
   className = "",
 }: WhatsAppButtonProps) {
+  const cleanedPhone = phoneNumber.replace(/\s+/g, "").replace(/^\+/, "");
   const encoded = encodeURIComponent(message);
-  const href = `https://wa.me/?text=${encoded}`;
+  const href = `https://wa.me/${cleanedPhone}?text=${encoded}`;
 
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Discuter sur WhatsApp avec DG Style au ${phoneNumber}`}
       className={`inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-4 text-sm font-medium transition-colors hover:bg-muted ${className}`}
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
